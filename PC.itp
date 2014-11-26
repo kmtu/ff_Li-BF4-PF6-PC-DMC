@@ -4,19 +4,19 @@
 
  [ atoms ]
  ;  nr   type  resnr residue  atom  cgnr    charge
-     1    O2_      1      PC    O1     1  -0.63790  ;charges are adjusted to zero in total
-     2    C2_      1      PC    C2     2   1.04880  ;
-     3    O1_      1      PC    O3     3  -0.45010  ;        O1
-     4    O1_      1      PC    O4     4  -0.41210  ;        ||
-     5    C1_      1      PC    C5     5  -0.00401  ;        C2
-     6     H_      1      PC    H51    6   0.11647  ;      /    \
-     7     H_      1      PC    H52    7   0.11647  ;    O3      O4
-     8    C1_      1      PC    C6     8   0.08299  ;      \    /
-     9     H_      1      PC    H6     9   0.11647  ;      C5--C6
-    10    C1_      1      PC    C7    10  -0.32650  ;    /  |  |  \
-    11     H_      1      PC    H71   11   0.11647  ;  H51 H52 H6  C7--H73
-    12     H_      1      PC    H72   12   0.11647  ;             /  \
-    13     H_      1      PC    H73   13   0.11647  ;           H71  H72
+     1    O2_      1      PC    O1     1   -0.6378  ;charges are adjusted to zero in total
+     2    C2_      1      PC    C2     2    1.0489  ;
+     3    O1_      1      PC    O3     3   -0.4509  ;        O1
+     4    O1_      1      PC    O4     4   -0.4120  ;        ||
+     5    C1_      1      PC    C5     5   -0.0040  ;        C2
+     6     H_      1      PC    H51    6    0.1165  ;      /    \
+     7     H_      1      PC    H52    7    0.1165  ;    O3      O4
+     8    C1_      1      PC    C6     8    0.0832  ;      \    /
+     9     H_      1      PC    H6     9    0.1165  ;      C5--C6
+    10    C1_      1      PC    C7    10   -0.3264  ;    /  |  |  \
+    11     H_      1      PC    H71   11    0.1165  ;  H51 H52 H6  C7--H73
+    12     H_      1      PC    H72   12    0.1165  ;             /  \
+    13     H_      1      PC    H73   13    0.1165  ;           H71  H72
 
  [ constraints ]
  ;  i    j   func     b0
