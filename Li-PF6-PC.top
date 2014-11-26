@@ -1,0 +1,14 @@
+#include "parameters.itp"
+#include "Li.itp"
+#include "PF6.itp"
+#include "PC.itp"
+
+ [ system ]
+ ; Name
+ Li+ PF4 in PC
+
+ [ molecules ]
+ ; Compound   #mols
+ Li              80
+ PF6             80
+ PC             800
