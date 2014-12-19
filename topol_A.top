@@ -1,0 +1,58 @@
+[ defaults ]
+; nbfunc   comb-rule   gen-pairs  fudgeLJ  fudgeQQ
+       1           2         yes      0.5    0.833
+
+[ atomtypes ]
+;Li  ... name   bond_type     mass     charge   ptype   sigma         epsilon       Amb
+ Li       Li          0.00000  0.00000   A     1.46e-1       0.799144
+;PF6 ... name   bond_type     mass     charge   ptype   sigma         epsilon       Amb
+  F        F          0.00000  0.00000   A     3.00e-1       0.284512
+  P        P          0.00000  0.00000   A     0             0.000000
+;PC  ... name   bond_type     mass     charge   ptype   sigma         epsilon       Amb
+ O2       O2          0.00000  0.00000   A     3.06e-1       0.878640
+ C2       C2          0.00000  0.00000   A     3.75e-1       0.439320
+ O1       O1          0.00000  0.00000   A     3.00e-1       0.711280
+ C1       C1          0.00000  0.00000   A     3.50e-1       0.276144
+  H        H          0.00000  0.00000   A     2.50e-1       0.125520
+
+[ bondtypes ]
+;  i    j func             b0         kb
+   P    F    1          0.163     167360
+
+[ angletypes ]
+;  i    j    k  func      th0        cth
+   F    P    F     1     90.0     836.80
+  C2   O1   C1     1    109.5     502.08
+  O2   C2   O1     1    120.0     669.44
+  O1   C2   O1     1    120.0     669.44
+  O1   C1   C1     1    109.5     418.40
+  O1   C1    H     1    109.5     418.40
+  C1   C1    H     1    109.5     418.40
+  C1   C1   C1     1    109.5     334.72
+   H   C1    H     1    109.5     292.88
+
+[ dihedraltypes ]
+ ;  i    j    k    l   func   phase        kd  pn
+   C2   O1   C1   C1      1       0  0.267776   3
+   C2   O1   C1    H      1       0  0.801236   3
+   O2   C2   O1   C1      1     180  2.824200   2
+   O1   C2   O1   C1      1     180  2.824200   2
+   O1   C1   C1   O1      1       0  0.033472   3
+   O1   C1   C1   C1      1       0  0.326352   3
+   O1   C1   C1    H      1       0  0.000000   3
+   C1   C1   C1    H      1       0  0.326352   3
+    H   C1   C1    H      1       0  0.326352   3
+
+#include "Li.itp"
+#include "PF6.itp"
+#include "PC_A.itp"
+
+[ system ]
+; Name
+ Li+ PF4 in PC
+
+[ molecules ]
+; Compound   #mols
+ Li              80
+ PF6             80
+ PC             800

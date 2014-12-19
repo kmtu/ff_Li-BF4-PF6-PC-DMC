@@ -1,0 +1,98 @@
+; PC_A.itp created by acpype (Rev: 7466) on Fri Dec 12 06:05:22 2014
+[ moleculetype ]
+;name            nrexcl
+ PC               2
+
+[ atoms ]
+;   nr  type  resi  res  atom  cgnr     charge      mass       ; qtot   bond_type
+     1   C2     1   PC     C1    1     1.048900     12.01000   
+     2   O1     1   PC     O1    2    -0.450900     16.00000   
+     3   C1     1   PC     C2    3    -0.004000     12.01000   
+     4   C1     1   PC     C3    4     0.083200     12.01000   
+     5   O1     1   PC     O2    5    -0.412000     16.00000   
+     6    H     1   PC     H1    6     0.116500      1.00800   
+     7    H     1   PC     H2    7     0.116500      1.00800   
+     8   C1     1   PC     C4    8    -0.326400     12.01000   
+     9    H     1   PC     H3    9     0.116500      1.00800   
+    10    H     1   PC     H4   10     0.116500      1.00800   
+    11    H     1   PC     H5   11     0.116500      1.00800   
+    12    H     1   PC     H6   12     0.116500      1.00800   
+    13   O2     1   PC     O3   13    -0.637800     16.00000   
+
+[ constraints ]
+     1      2   1    1.3640e-01  ;  C1 - O1    
+     1      5   1    1.3610e-01  ;  C1 - O2    
+     1     13   1    1.1950e-01  ;  C1 - O3    
+     2      3   1    1.4320e-01  ;  O1 - C2    
+     3      4   1    1.5370e-01  ;  C2 - C3    
+     3      6   1    1.0920e-01  ;  C2 - H1    
+     3      7   1    1.0920e-01  ;  C2 - H2    
+     4      5   1    1.4440e-01  ;  C3 - O2    
+     4      8   1    1.5160e-01  ;  C3 - C4    
+     4      9   1    1.0970e-01  ;  C3 - H3    
+     8     10   1    1.0950e-01  ;  C4 - H4    
+     8     11   1    1.0950e-01  ;  C4 - H5    
+     8     12   1    1.0950e-01  ;  C4 - H6    
+
+[ angles ]
+;   ai     aj     ak
+     1      2      3  ;  C1 - O1 - C2    
+     1      5      4  ;  C1 - O2 - C3    
+     2      1      5  ;  O1 - C1 - O2    
+     2      1     13  ;  O1 - C1 - O3    
+     2      3      4  ;  O1 - C2 - C3    
+     2      3      6  ;  O1 - C2 - H1    
+     2      3      7  ;  O1 - C2 - H2    
+     3      4      5  ;  C2 - C3 - O2    
+     3      4      8  ;  C2 - C3 - C4    
+     3      4      9  ;  C2 - C3 - H3    
+     4      3      6  ;  C3 - C2 - H1    
+     4      3      7  ;  C3 - C2 - H2    
+     4      8     10  ;  C3 - C4 - H4    
+     4      8     11  ;  C3 - C4 - H5    
+     4      8     12  ;  C3 - C4 - H6    
+     5      1     13  ;  O2 - C1 - O3    
+     5      4      8  ;  O2 - C3 - C4    
+     5      4      9  ;  O2 - C3 - H3    
+     6      3      7  ;  H1 - C2 - H2    
+     8      4      9  ;  C4 - C3 - H3    
+    10      8     11  ;  H4 - C4 - H5    
+    10      8     12  ;  H4 - C4 - H6    
+    11      8     12  ;  H5 - C4 - H6    
+
+[ dihedrals ] ; propers
+; treated as RBs in GROMACS to use combine multiple AMBER torsions per quartet
+;    i      j      k      l
+     1      2      3      4      ;  C1-    O1-    C2-    C3
+     1      2      3      6      ;  C1-    O1-    C2-    H1
+     1      2      3      7      ;  C1-    O1-    C2-    H2
+     1      5      4      3      ;  C1-    O2-    C3-    C2
+     1      5      4      8      ;  C1-    O2-    C3-    C4
+     1      5      4      9      ;  C1-    O2-    C3-    H3
+     2      1      5      4      ;  O1-    C1-    O2-    C3
+     2      3      4      5      ;  O1-    C2-    C3-    O2
+     2      3      4      8      ;  O1-    C2-    C3-    C4
+     2      3      4      9      ;  O1-    C2-    C3-    H3
+     3      4      8     10      ;  C2-    C3-    C4-    H4
+     3      4      8     11      ;  C2-    C3-    C4-    H5
+     3      4      8     12      ;  C2-    C3-    C4-    H6
+     5      1      2      3      ;  O2-    C1-    O1-    C2
+     5      4      3      6      ;  O2-    C3-    C2-    H1
+     5      4      3      7      ;  O2-    C3-    C2-    H2
+     5      4      8     10      ;  O2-    C3-    C4-    H4
+     5      4      8     11      ;  O2-    C3-    C4-    H5
+     5      4      8     12      ;  O2-    C3-    C4-    H6
+     6      3      4      8      ;  H1-    C2-    C3-    C4
+     6      3      4      9      ;  H1-    C2-    C3-    H3
+     7      3      4      8      ;  H2-    C2-    C3-    C4
+     7      3      4      9      ;  H2-    C2-    C3-    H3
+     9      4      8     10      ;  H3-    C3-    C4-    H4
+     9      4      8     11      ;  H3-    C3-    C4-    H5
+     9      4      8     12      ;  H3-    C3-    C4-    H6
+    13      1      2      3      ;  O3-    C1-    O1-    C2
+    13      1      5      4      ;  O3-    C1-    O2-    C3
+
+[ dihedrals ] ; impropers
+; treated as propers in GROMACS to use correct AMBER analytical function
+;    i      j      k      l   func   phase     kd      pn
+     5      1      2     13      4   180.00  21.96600   2 ;  O2-    C1-    O1-    O3
