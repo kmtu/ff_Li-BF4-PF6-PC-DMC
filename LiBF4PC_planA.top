@@ -1,0 +1,58 @@
+[ defaults ]
+; nbfunc   comb-rule   gen-pairs  fudgeLJ  fudgeQQ
+       1           2         yes      0.5    0.833
+
+[ atomtypes ]
+;Li  ... name   bond_type     mass     charge   ptype   sigma         epsilon       Amb
+ Li       Li          0.00000  0.00000   A     1.46e-1       0.799144
+;BF4 ... name   bond_type     mass     charge   ptype   sigma         epsilon       Amb
+  B        B          0.00000  0.00000   A     0.00000e+00   0.00000e+00
+  F        F          0.00000  0.00000   A     3.00000e-01   2.84512e-01
+;PC  ... name   bond_type     mass     charge   ptype   sigma         epsilon       Amb
+ O2       O2          0.00000  0.00000   A     3.06e-1       0.878640
+ C2       C2          0.00000  0.00000   A     3.75e-1       0.439320
+ O1       O1          0.00000  0.00000   A     3.00e-1       0.711280
+ C1       C1          0.00000  0.00000   A     3.50e-1       0.276144
+  H        H          0.00000  0.00000   A     2.50e-1       0.125520
+
+[ bondtypes ]
+;  i    j func       b0         kb
+   B    F    1    0.139    307105.6
+
+[ angletypes ]
+;  i    j    k  func      th0        cth
+   F    B    F     1    109.5    644.336
+  C2   O1   C1     1    109.5     502.08
+  O2   C2   O1     1    120.0     669.44
+  O1   C2   O1     1    120.0     669.44
+  O1   C1   C1     1    109.5     418.40
+  O1   C1    H     1    109.5     418.40
+  C1   C1    H     1    109.5     418.40
+  C1   C1   C1     1    109.5     334.72
+   H   C1    H     1    109.5     292.88
+
+[ dihedraltypes ]
+;  i    j    k    l   func   phase        kd  pn
+  C2   O1   C1   C1      1       0  0.267776   3
+  C2   O1   C1    H      1       0  0.801236   3
+  O2   C2   O1   C1      1     180  2.824200   2
+  O1   C2   O1   C1      1     180  2.824200   2
+  O1   C1   C1   O1      1       0  0.033472   3
+  O1   C1   C1   C1      1       0  0.326352   3
+  O1   C1   C1    H      1       0  0.000000   3
+  C1   C1   C1    H      1       0  0.326352   3
+   H   C1   C1    H      1       0  0.326352   3
+
+#include "Li.itp"
+#include "BF4.itp"
+#include "PC_A.itp"
+
+[ system ]
+; Name
+ Li+ BF4 in PC
+
+[ molecules ]
+; Compound   #mols
+ Li              80
+ BF4             80
+ PC             800
